@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Zagolovok dokumenta -->
+    <!-- Заголовок документа -->
     <title>Мой выбор - ЗОЖ</title>
-    <!-- Favicon -->
+    <!-- Фавикона -->
     <link rel="icon" type="image/png" href="icon.png">
-    <!-- Podklyuchenie Tailwind CSS -->
+    <!-- Подключение Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Podklyuchenie ikonok -->
+    <!-- Подключение иконок -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
@@ -17,30 +17,30 @@
         
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #1e293b; /* Temno-sinij fon */
+            background-color: #1e293b; /* Тёмно-синий фон */
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Zhestko zapreshhaem lyuboj skroll na stranice */
+            overflow: hidden; /* Жёстко запрещаем любой скролл на странице */
         }
     </style>
 </head>
 
-<!-- Stranica ishodno prozrachnaya dlya plavnogo poyavleniya (fade-in) -->
+<!-- Страница исходно прозрачная для плавного появления (fade-in) -->
 <body class="antialiased opacity-0 transition-opacity duration-1000 ease-in-out flex items-center justify-center w-screen h-screen" id="main-body">
 
-    <!-- Eto karkas, kotoryj menyaet razmer cherez JavaScript -->
+    <!-- Это каркас, который меняет размер через JavaScript -->
     <div id="poster-wrapper" class="relative overflow-hidden bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] rounded-xl">
         
-        <!-- SAM PLAKAT s fiksirovannym razmerom, kotoryj masshtabiruetsya vnutri karkasa -->
+        <!-- САМ ПЛАКАТ с фиксированным размером, который масштабируется внутри каркаса -->
         <div id="poster" class="absolute top-0 left-0 flex flex-col bg-white w-[800px] h-[1131px] origin-top-left">
             
-            <!-- Fonovaya ikonka mozga -->
+            <!-- Фоновая иконка мозга -->
             <div class="absolute top-0 right-0 -mt-6 -mr-6 text-slate-100 opacity-80 z-0">
                 <i data-lucide="brain" style="width: 280px; height: 280px;"></i>
             </div>
 
-            <!-- SHAG 1 i 2: Broskij zagolovok -->
-            <!-- Umenshil padding-top (pt-8) chtoby dat bolshe mesta snizu -->
+            <!-- ШАГ 1 и 2: Броский заголовок -->
+            <!-- Уменьшил padding-top (pt-8) чтобы дать больше места снизу -->
             <header class="text-center pt-8 px-8 relative z-10 flex-shrink-0">
                 <div class="inline-block bg-indigo-600 text-white px-5 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-3 shadow-md">
                     Проект: Мой выбор — ЗОЖ
@@ -53,9 +53,9 @@
                 </p>
             </header>
 
-            <!-- SHAG 3: Vizualnaya koncepciya - Kontrasty -->
+            <!-- ШАГ 3: Визуальная концепция - Контрасты -->
             <section class="grid grid-cols-2 gap-5 px-10 mt-6 relative z-10 flex-shrink-0">
-                <!-- Zona NET (priglushennyj seryj) -->
+                <!-- Зона НЕТ (приглушённый серый) -->
                 <div class="bg-slate-100 rounded-3xl p-6 border-4 border-slate-300 flex flex-col items-center text-center">
                     <div class="bg-slate-200 p-3 rounded-full mb-3 shadow-inner">
                         <i data-lucide="battery-warning" class="w-12 h-12 text-rose-400"></i>
@@ -73,7 +73,7 @@
                     </div>
                 </div>
 
-                <!-- Zona DA (yarkij zelenyj) -->
+                <!-- Зона ДА (яркий зелёный) -->
                 <div class="bg-green-400 rounded-3xl p-6 border-4 border-green-500 flex flex-col items-center text-center shadow-lg relative overflow-hidden">
                     <div class="absolute inset-0 bg-white opacity-10"></div>
                     <div class="bg-green-300 p-3 rounded-full mb-3 shadow-md relative z-10">
@@ -93,7 +93,7 @@
                 </div>
             </section>
 
-            <!-- SHAG 2: Fakty / Argumenty -->
+            <!-- ШАГ 2: Факты / Аргументы -->
             <section class="bg-slate-50 rounded-3xl p-6 mx-10 mt-6 border-2 border-slate-200 relative z-10 flex-shrink-0">
                 <h3 class="text-xl font-bold mb-4 text-slate-800 flex items-center gap-2">
                     <i data-lucide="info" class="w-5 h-5 text-indigo-500"></i> Факты о мозге:
@@ -118,7 +118,7 @@
                 </div>
             </section>
 
-            <!-- SHAG 2: Chek-list (mt-auto prizhimayet ego v samyj niz, no s zapasom) -->
+            <!-- ШАГ 2: Чек-лист (mt-auto прижимает его в самый низ, но с запасом) -->
             <section class="text-center mt-auto mb-8 px-10 relative z-10 flex-shrink-0">
                 <h3 class="text-xl font-black text-slate-900 mb-5 uppercase tracking-wide border-t-2 border-slate-200 pt-5 inline-block">
                     Твой чек-лист на сегодня:
@@ -139,59 +139,59 @@
                 </div>
             </section>
 
-        </div> <!-- Konec plakata -->
-    </div> <!-- Konec obertki -->
+        </div> <!-- Конец плаката -->
+    </div> <!-- Конец обёртки -->
 
     <script>
-        // Inicializaciya ikonok
+        // Инициализация иконок
         lucide.createIcons();
 
         const poster = document.getElementById('poster');
         const wrapper = document.getElementById('poster-wrapper');
         const body = document.getElementById('main-body');
 
-        // --- IDEALNYJ AVTOMASHTAB ---
+        // --- ИДЕАЛЬНЫЙ АВТОМАСШТАБ ---
         function resizePoster() {
-            // Esli ekran malenkij (telefon), delaem otstupy pomenshe (16px), inache pobolshe (40px)
+            // Если экран маленький (телефон), делаем отступы поменьше (16px), иначе побольше (40px)
             const padding = window.innerWidth < 640 ? 16 : 40; 
             
-            // Rasschityvaem svobodnoe mesto s uchetom otstupov (padding * 2, tak kak sleva+sprava / sverhu+snizu)
+            // Рассчитываем свободное место с учётом отступов (padding * 2, так как слева+справа / сверху+снизу)
             const availableWidth = window.innerWidth - (padding * 2);
             const availableHeight = window.innerHeight - (padding * 2);
             
-            // Sravnivaem masshtaby i vybiram naimenshij, chtoby plakat tochno vlez v ekran celikom
+            // Сравниваем масштабы и выбираем наименьший, чтобы плакат точно влез в экран целиком
             const scaleX = availableWidth / 800;
             const scaleY = availableHeight / 1131;
-            const scale = Math.min(scaleX, scaleY, 1); // 1 = chtoby ne rastjagivalsya bolshe originala
+            const scale = Math.min(scaleX, scaleY, 1); // 1 = чтобы не растягивался больше оригинала
             
-            // 1. Uvelichivaem/umenshaem sam plakat
+            // 1. Увеличиваем/уменьшаем сам плакат
             poster.style.transform = `scale(${scale})`;
             
-            // 2. Podgonyayem razmer OBERTKI tochno pod razmer masshtabirovannogo plakata.
-            // Eto garantiryet, chto nichego ne obrezhetsya i ne budet lishnih skrollov.
+            // 2. Подгоняем размер ОБЁРТКИ точно под размер масштабированного плаката.
+            // Это гарантирует, что ничего не обрезается и не будет лишних скроллов.
             wrapper.style.width = `${800 * scale}px`;
             wrapper.style.height = `${1131 * scale}px`;
         }
 
-        // Slushaem izmeneniya okna
+        // Слушаем изменения окна
         window.addEventListener('resize', resizePoster);
 
-        // --- PLAVNOE POYAVLENIE ---
+        // --- ПЛАВНОЕ ПОЯВЛЕНИЕ ---
         window.addEventListener('load', async () => {
-            // Zhdem pravilnuyu zagruzku shriftov
+            // Ждём правильную загрузку шрифтов
             await document.fonts.ready;
             
-            // Nastrivaem razmer
-            resizePoster(); 
+            // Настраиваем размер
+            resizePoster();
             
-            // Zapuskaem animaciyu
+            // Запускаем анимацию
             requestAnimationFrame(() => {
                 body.classList.remove('opacity-0');
                 body.classList.add('opacity-100');
             });
         });
 
-        // Vyzyvayem srazu, chtoby ustranit' melkie priganya do polnoj zagruzki
+        // Вызываем сразу, чтобы устранить мелкие прыганья до полной загрузки
         resizePoster();
     </script>
 </body>
